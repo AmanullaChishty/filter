@@ -1,0 +1,14 @@
+body{
+  
+  background-color: #edf2f2;
+}
+.App{
+  text-align: center;
+}
+.header{
+  font-size: 2em; 
+  font-weight: 500;
+}
+.grid{
+  padding: 3em;
+}

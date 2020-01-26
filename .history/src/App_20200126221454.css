@@ -1,0 +1,12 @@
+body{
+  
+  background-color: #edf2f2;
+}
+.App{
+  text-align: center;
+}
+.header{
+  font-size: 1.8em; 
+  font-weight: bold;
+  margin: 1em;
+}

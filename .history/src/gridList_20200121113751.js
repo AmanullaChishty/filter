@@ -1,0 +1,35 @@
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+class WorkList extends Component {
+  render() {
+    const {works} = this.props;
+
+    return (
+      <table className="table table-hover">
+        <thead>
+          <tr>
+            <th>Nome</th>
+          </tr>
+        </thead>
+        <tbody>{works.map((work) => <tr key={work}><td>{work}</td></tr>)}</tbody>
+      </table>
+    );
+  }
+}
+
+// function mapStateToProps({works}) {
+//     console.log('works',works);
+//   return {
+//     works: works.works
+//   }
+// }
+
+const mapStateToProps=state=> {
+    console.log('state',state)
+    return {
+        value: works.value
+        };
+  }
+
+export default connect(mapStateToProps)(WorkList);
