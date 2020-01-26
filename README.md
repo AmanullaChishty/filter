@@ -1,1 +1,1 @@
-#### A simple redux setup with [create-react-app](https://github.com/facebookincubator/create-react-app).
+#### redux setup with react for filter.
