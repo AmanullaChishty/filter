@@ -1,9 +1,11 @@
 #### Redux setup with reactjs for filter.
 
 ### Installation
-git clone https://github.com/AmanullaChishty/filter.git<br/>
-and then run 'npm install' to install node modules, in the folder where you have cloned the project<br/>
-and then run 'npm start' to run the project.<br/>
+<ul>
+<li>git clone https://github.com/AmanullaChishty/filter.git</li>
+<li>and then run 'npm install' to install node modules, in the folder where you have cloned the project</li>
+<li>and then run 'npm start' to run the project.</li>
+</ul>
 
 ### About
 This is a innvoice filter which takes parameters like currency type,amount range and time period
