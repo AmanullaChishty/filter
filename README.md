@@ -10,7 +10,7 @@ This is a innvoice filter which takes parameters like currency type,amount range
 to load a grid of data matching the filter criteria.<br/>
 
 ### Folder Structure
-src-source files<br/>
+<b>src-</b> source files<br/>
 under source files<br/>
 <b>App.js</b> is the parent component which have Search Bar and Grid as child component in terms of atomic design this is PAGE.<br/>
 <b>gridList.js-</b> is the grid component to render the filtered grid list ,used Mui-Datatables for the grid.<br/>
