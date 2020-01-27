@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchData } from '../actions/fetchData';
@@ -9,9 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import { Grid, Card, CardContent,CardActions, Input, Button, InputAdornment } from '@material-ui/core';
-import DateFnsUtils from '@date-io/date-fns';
-import { KeyboardDatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
-import 'date-fns';
+import DatePicker from '../../atoms/datePicker'
 
 
 class SearchBar extends Component {
@@ -35,12 +33,6 @@ class SearchBar extends Component {
       
     }
   }
-
-  componentDidMount() {
-  
-    }
-
-  
 
   handleChange(event){
     let val = event.target.value
@@ -144,32 +136,26 @@ class SearchBar extends Component {
               <span style={sectionLabel}>Enter Time Duration</span>
               <Grid style={innerSection}>
                 <FormControl style={formControlStyle} >
-                  <Fragment>
-                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                      <KeyboardDatePicker
-                        label="From Date"
-                        clearable
-                        value={startDate}
-                        placeholder="Select from date"
-                        onChange={this.setStartDate}
-                        format="dd/MM/yyyy"
-                      />
-                    </MuiPickersUtilsProvider>
-                  </Fragment>
+                  <DatePicker
+                  label="From Date"
+                  placeholder="Select from date"
+                  format="dd/MM/yyyy"
+                  inputProps={{
+                    onChange:this.setStartDate,
+                    value:startDate
+                      }}
+                  />
                 </FormControl>
                 <FormControl style={formControlStyleLeft} >
-                <Fragment>
-                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
-                      <KeyboardDatePicker
-                        label="To Date"
-                        clearable
-                        value={endDate}
-                        placeholder="Select end date"
-                        onChange={this.setEndDate}
-                        format="dd/MM/yyyy"
-                      />
-                    </MuiPickersUtilsProvider>
-                  </Fragment>
+                <DatePicker
+                  label="To Date"
+                  placeholder="Select to date"
+                  format="dd/MM/yyyy"
+                  inputProps={{
+                    onChange:this.setEndDate,
+                    value:endDate
+                      }}
+                  />
                 </FormControl>
               </Grid>
             </Grid>

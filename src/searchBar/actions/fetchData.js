@@ -1,6 +1,5 @@
 import { getData } from "./searchAction";
 
-//https://my.api.mockaroo.com/tallydata.json?key=1e3baa20
 function fetchData() {
     return dispatch => {
         fetch('data.json')
