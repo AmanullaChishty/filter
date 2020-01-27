@@ -17,6 +17,8 @@ const options = {
 class GridList extends Component {
   render() {
     const {result,seacrhedData} = this.props;
+    let startDate=''
+    let endDate=''
 
     if(result.length===0 && seacrhedData){
       alert('There is no data for your search criteria,please enter a date between 24/1/2018 to 1/12/2020,and amount between 1 to 1000')
@@ -28,7 +30,7 @@ class GridList extends Component {
         let yyyy = date.getFullYear();
         let mm =date.getMonth()+1
         let dd=date.getDate();
-        seacrhedData.startDate = dd+'/'+ mm +'/'+yyyy;
+        startDate = dd+'/'+ mm +'/'+yyyy;
         
       }
       if(seacrhedData.endDate){
@@ -36,11 +38,11 @@ class GridList extends Component {
         let yyyy = date.getFullYear();
         let mm =date.getMonth()+1
         let dd=date.getDate();
-        seacrhedData.endDate = dd+'/'+ mm +'/'+yyyy;
+        endDate = dd+'/'+ mm +'/'+yyyy;
         
       }
     }
-    const title=('Currency '+seacrhedData.ccy + ' Invoices with value between '+ seacrhedData.ccy+ ' '+ seacrhedData.lowerLimit +' - '+ seacrhedData.upperLimit +' maturing between '+seacrhedData.startDate+' and '+ seacrhedData.endDate)
+    const title=('Currency '+seacrhedData.ccy + ' Invoices with value between '+ seacrhedData.ccy+ ' '+ seacrhedData.lowerLimit +' - '+ seacrhedData.upperLimit +' maturing between '+startDate+' and '+ endDate)
     
     if(result.length>0){
       result.forEach(item=>{
