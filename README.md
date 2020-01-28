@@ -1,4 +1,4 @@
-#### Redux setup with reactjs for filter.
+### Redux setup with reactjs for filter.
 
 ### Installation
 <ul>
@@ -8,7 +8,7 @@
 </ul>
 
 ### About
-This is a innvoice filter which takes parameters like currency type,amount range and time period
+This is a invoice filter which takes parameters like currency type,amount range and time period
 to load a grid of data matching the filter criteria.<br/>
 
 ### Folder Structure
