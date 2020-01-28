@@ -27,5 +27,5 @@ sub folders in searchBar are actions,components,reducer,selectors.<br/>
 it has a DatePicker component to select date.
 
 
-### P.S: The data.json is present in public folder and it is the source of data it has 300 records and the amount ranges from 1 to 1000 and date ranges from 24/01/2018 to 24/12/2020 in the data.
+#### P.S: The data.json is present in public folder and it is the source of data it has 300 records and the amount ranges from 1 to 1000 and date ranges from 24/01/2018 to 24/12/2020 in the data.
 
