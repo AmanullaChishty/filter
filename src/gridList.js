@@ -26,20 +26,10 @@ class GridList extends Component {
 
     if(seacrhedData){
       if(seacrhedData.startDate){
-        let date=new Date(seacrhedData.startDate)
-        let yyyy = date.getFullYear();
-        let mm =date.getMonth()+1
-        let dd=date.getDate();
-        startDate = dd+'/'+ mm +'/'+yyyy;
-        
+        startDate=new Date(seacrhedData.startDate).toLocaleDateString()
       }
       if(seacrhedData.endDate){
-        let date=new Date(seacrhedData.endDate)
-        let yyyy = date.getFullYear();
-        let mm =date.getMonth()+1
-        let dd=date.getDate();
-        endDate = dd+'/'+ mm +'/'+yyyy;
-        
+        endDate=new Date(seacrhedData.endDate).toLocaleDateString()    
       }
     }
     const title=('Currency '+seacrhedData.ccy + ' Invoices with value between '+ seacrhedData.ccy+ ' '+ seacrhedData.lowerLimit +' - '+ seacrhedData.upperLimit +' maturing between '+startDate+' and '+ endDate)
@@ -47,12 +37,7 @@ class GridList extends Component {
     if(result.length>0){
       result.forEach(item=>{
         if(item.maturity_date){
-          let date=new Date(item.maturity_date*1000)
-          let yyyy = date.getFullYear();
-          let mm =date.getMonth()+1
-          let dd=date.getDate();
-            item.maturity_date = dd+'/'+ mm +'/'+yyyy;
-          
+          item.maturity_date=new Date(item.maturity_date*1000).toLocaleDateString()
         }
       })
     }
