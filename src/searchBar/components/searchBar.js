@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchData } from '../actions/fetchData';
 import { search } from '../actions/searchAction';
-import { getData, getSearchData } from '../selectors/searchSelectors';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
@@ -173,12 +172,6 @@ class SearchBar extends Component {
 } 
 
 
-const mapStateToProps=state=> {
-    return {
-        value: getSearchData(state),
-        content:getData(state)
-        };
-  }
 
 const mapDispatchToProps = dispatch => bindActionCreators({
     searchData: search,
@@ -186,4 +179,4 @@ const mapDispatchToProps = dispatch => bindActionCreators({
 }, dispatch)
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
+export default connect(null, mapDispatchToProps)(SearchBar);
